@@ -1,0 +1,104 @@
+/* ChatBot.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: url('https://files.ably.io/ghost/prod/2023/02/the-ultimate-live-chat-features-list.png') no-repeat center center fixed; /* Background image URL */
+    background-size: cover; /* Ensure the image covers the entire background */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chatbot-container {
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Softer shadow for a modern look */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chatbot-header {
+    background-color: #ff5722; /* Header color changed to orange */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.8em; /* Increased font size */
+    border-bottom: 3px solid #e64a19; /* Bottom border for the header */
+}
+
+.chatbot-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 300px; /* Limit height for scrolling */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for messages */
+    border-radius: 0 0 12px 12px; /* Rounded corners at the bottom */
+}
+
+.message {
+    margin-bottom: 15px;
+}
+
+.user-message {
+    background-color: #ffe0b2; /* User message bubble color in light orange */
+    padding: 12px;
+    border-radius: 20px;
+    margin-left: auto;
+    max-width: 75%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.bot-message {
+    background-color: #f1f1f1; /* Bot message bubble color */
+    padding: 12px;
+    border-radius: 20px;
+    max-width: 75%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.chatbot-input {
+    display: flex;
+    padding: 15px;
+    background-color: #f8f9fa; /* Light background for input */
+    border-top: 2px solid #ff5722; /* Top border matching the header */
+}
+
+.chatbot-input input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 20px;
+    margin-right: 10px;
+    outline: none; /* Remove outline on focus */
+    transition: border-color 0.3s; /* Transition for focus effect */
+}
+
+.chatbot-input input:focus {
+    border-color: #ff5722; /* Change border color on focus */
+}
+
+.chatbot-input button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #ff5722; /* Button color changed to orange */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chatbot-input button:hover {
+    background-color: #e64a19; /* Darker shade on hover */
+}
+
+/* Loading indicator */
+.loading {
+    text-align: center;
+    font-size: 1em;
+    color: #ff5722; /* Loading text color */
+    margin-top: 10px;
+}
